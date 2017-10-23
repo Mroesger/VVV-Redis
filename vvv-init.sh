@@ -5,9 +5,11 @@ PHPREDMIN_PATH="$(pwd)/$PHPREDMIN_DIR/public"
 PHPREDMIN_CONF="/etc/supervisor/conf.d/phpredmin.conf"
 
 echo " * Setting up Redis..."
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/pkg-gearman
 sudo apt-get update
-sudo apt-get -y install redis-server php5-redis gearman-server php5-gearman supervisor
-sudo service php5-fpm restart
+sudo apt-get -y install language-pack-en-base redis-server php-redis gearman-server php-gearman supervisor
+sudo service php7.1-fpm restart
 
 if [ ! -d "$PHPREDMIN_DIR" ]; then
     echo " * Cloning PHPRedMin..."
