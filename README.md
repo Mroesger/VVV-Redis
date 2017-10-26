@@ -1,6 +1,10 @@
 # VVV + Redis
 
 This package sets up [Redis](http://redis.io) and [PHPRedMin](https://github.com/sasanrose/phpredmin) on your [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) virtual machine.
+Forked for php 7.1 on VVV 2. 
+
+Fixes issue listed in this blog post for gearman: https://www.patreon.com/posts/gearman-now-in-14627464
+Thanks Ondřej Surý, goblindegook
 
 ## Installation
 
@@ -8,7 +12,7 @@ Clone this repository into VVV's `www` directory, then reprovision VVV:
 
 ```
 $ cd path/to/vvv/www
-$ git clone https://github.com/goblindegook/VVV-Redis redis.vvv
+$ git clone https://github.com/Mroesger/VVV-Redis.git redis.vvv
 $ vagrant provision
 ```
 
